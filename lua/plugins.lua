@@ -1,15 +1,29 @@
 return {
--- Plugins will be added here
+  -- Plugins will be added here
 
   -- colorscheme catpuccin
-  { "catppuccin/nvim",
+  {
+    "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
     priority = 1000,
     config = function()
       require("catppuccin").setup { background = { dark = "mocha" } }
-      vim.cmd.colorscheme  "catppuccin"
+      vim.cmd.colorscheme "catppuccin"
     end
+  },
+
+  {
+    -- Set lualine as statusline
+    'nvim-lualine/lualine.nvim',
+    opts = {
+      options = {
+        icons_enabled = false,
+        theme = 'catppuccin',
+        component_separators = '|',
+        section_separators = '',
+      },
+    },
   },
 
   {
@@ -22,20 +36,20 @@ return {
     },
   },
 
-    -- Comment higligted lines with gc
+  -- Comment higligted lines with gc
   { 'numToStr/Comment.nvim', opts = {} },
 
-   -- Auto Pairs closes brackets
+  -- Auto Pairs closes brackets
   {
     "windwp/nvim-autopairs"
   },
 
-    -- Nvimtree (File Explorer)
+  -- Nvimtree (File Explorer)
   {
     'nvim-tree/nvim-tree.lua',
     lazy = true,
     dependencies = {
-    'nvim-tree/nvim-web-devicons',
+      'nvim-tree/nvim-web-devicons',
     },
   },
 
@@ -45,21 +59,21 @@ return {
     lazy = true,
   },
 
-        -- Toggle Term
-    {
-        'akinsho/toggleterm.nvim',
-        config = true
-    },
+  -- Toggle Term
+  {
+    'akinsho/toggleterm.nvim',
+    config = true
+  },
 
-    -- Telescope (Fuzzy Finder)
+  -- Telescope (Fuzzy Finder)
   {
     'nvim-telescope/telescope.nvim',
     lazy = true,
     dependencies = {
-          {'nvim-lua/plenary.nvim'},
-      }
+      { 'nvim-lua/plenary.nvim' },
+    }
   },
-    -- Fuzzy Finder Algorithm which requires local dependencies to be built.
+  -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
   {
@@ -72,35 +86,35 @@ return {
     end,
   },
 
-        -- Language Support
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+  -- Language Support
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
+    dependencies = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },                   -- Required
+      { 'williamboman/mason.nvim' },                 -- Optional
+      { 'williamboman/mason-lspconfig.nvim' },       -- Optional
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },               -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },           -- Required
+      { 'hrsh7th/cmp-buffer' },             -- Optional
+      { 'hrsh7th/cmp-path' },               -- Optional
+      { 'saadparwaiz1/cmp_luasnip' },       -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },           -- Optional
 
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
-        }
-    },
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },                   -- Required
+      { 'rafamadriz/friendly-snippets' },       -- Optional
+    }
+  },
 
   -- Treesitter for syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
   },
-  -- Bufferline 
+  -- Bufferline
   {
     'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons'
