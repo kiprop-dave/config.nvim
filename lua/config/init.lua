@@ -1,0 +1,8 @@
+require "config/telescope"
+require "config/whichkey"
+require "config/treesitter"
+require "config/bufferline"
+require "config/autopairs"
+require "config/lsp-config"
+require "config/nvim-tree"
+require "config/toggle-term"
