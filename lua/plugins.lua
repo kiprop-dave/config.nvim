@@ -1,7 +1,7 @@
 return {
   -- Plugins will be added here
 
-  -- colorscheme catpuccin
+  -- colorscheme catppuccin
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -12,6 +12,15 @@ return {
       vim.cmd.colorscheme "catppuccin"
     end
   },
+  -- {
+  --   "olimorris/onedarkpro.nvim",
+  --   name = "onedark",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme "onedark_dark"
+  --   end
+  -- },
 
   {
     -- Set lualine as statusline
@@ -92,21 +101,21 @@ return {
     branch = 'v1.x',
     dependencies = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },                   -- Required
-      { 'williamboman/mason.nvim' },                 -- Optional
-      { 'williamboman/mason-lspconfig.nvim' },       -- Optional
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },               -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },           -- Required
-      { 'hrsh7th/cmp-buffer' },             -- Optional
-      { 'hrsh7th/cmp-path' },               -- Optional
-      { 'saadparwaiz1/cmp_luasnip' },       -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },           -- Optional
+      { 'hrsh7th/nvim-cmp' },         -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
+      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
 
       -- Snippets
-      { 'L3MON4D3/LuaSnip' },                   -- Required
-      { 'rafamadriz/friendly-snippets' },       -- Optional
+      { 'L3MON4D3/LuaSnip' },             -- Required
+      { 'rafamadriz/friendly-snippets' }, -- Optional
     }
   },
 
@@ -119,4 +128,9 @@ return {
     'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
+
+  -- copilot
+  {
+    'github/copilot.vim'
+  }
 }
