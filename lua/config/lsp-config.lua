@@ -19,7 +19,10 @@ lsp.ensure_installed({
   'gopls',
   'rust_analyzer',
   'lua_ls',
-  'tailwindcss'
+  'tailwindcss',
+  'prismals',
+  'clangd',
+  'svelte'
 })
 
 lsp.preset('recommended')

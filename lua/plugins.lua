@@ -24,15 +24,7 @@ return {
 
   {
     -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'catppuccin',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
+    'nvim-lualine/lualine.nvim'
   },
 
   {
@@ -127,6 +119,12 @@ return {
   {
     'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+
+  -- Git
+  {
+    'lewis6991/gitsigns.nvim',
+    dependencies = 'nvim-lua/plenary.nvim'
   },
 
   -- copilot
