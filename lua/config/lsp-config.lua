@@ -22,8 +22,11 @@ lsp.ensure_installed({
   'tailwindcss',
   'prismals',
   'clangd',
-  'svelte'
+  'svelte',
+  'angularls',
+  'jdtls'
 })
+
 
 lsp.preset('recommended')
 
@@ -71,6 +74,8 @@ cmp_mappings['<S-Tab>'] = nil
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
+
+lsp.skip_server_setup({ 'jdtls' })
 
 lsp.setup()
 

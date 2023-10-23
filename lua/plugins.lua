@@ -128,7 +128,16 @@ return {
   },
 
   -- copilot
+  -- {
+  --   'github/copilot.vim'
+  -- },
+  -- codeium
   {
-    'github/copilot.vim'
+    'Exafunction/codeium.vim'
+  },
+
+  -- Java setup
+  {
+    "mfussenegger/nvim-jdtls"
   }
 }
