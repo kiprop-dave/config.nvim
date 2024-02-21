@@ -1,6 +1,5 @@
 local java_cmds = vim.api.nvim_create_augroup('java_cmds', { clear = true })
 local cache_vars = {}
-print("jdtls.lua loaded")
 
 local root_files = {
   '.git',

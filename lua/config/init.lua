@@ -8,4 +8,5 @@ require "config/nvim-tree"
 require "config/toggle-term"
 require "config.lualine"
 require "config.gitsigns"
+require "config.ibl"
 require('nvim-tree').setup()

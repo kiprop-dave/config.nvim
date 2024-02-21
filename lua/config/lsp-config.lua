@@ -24,7 +24,8 @@ lsp.ensure_installed({
   'clangd',
   'svelte',
   'angularls',
-  'jdtls'
+  'jdtls',
+  'eslint'
 })
 
 
